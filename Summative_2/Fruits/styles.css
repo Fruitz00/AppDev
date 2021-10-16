@@ -1,0 +1,86 @@
+.pageColor {
+    background-color: #2A0944;
+}
+
+.tableColor{
+    /*Table font color here.*/
+    background-color: #A12568;
+    margin: auto;
+    width: 75%;
+    height: 100%
+}
+
+.tableHolder{
+    /*Box where the table is resting.*/
+    background-color: 'white';
+    border-color: white;
+    border: 20px;
+}
+
+.navigation{
+    background-color: #FEC260;
+    font-family: 'Comfortaa';
+    width: 800px;
+    height: auto;
+    border: 100px;
+    padding-left: 50px;
+    font-size: 30px;
+    font-weight:bold;
+    margin-left: 236px;
+    text-align: left;
+}
+
+button{
+    padding: 30px;
+    background-color:#2A0944;
+    max-height: 100px;
+    margin: 1%;
+    border:#FEC260;
+    border-radius: 10px;
+    font-family: 'Comfortaa';
+    color: #FEC260;
+    cursor: pointer;
+}
+
+body {
+    font-family: 'Comfortaa';
+    padding: 0;
+}
+
+table, td, th {
+    border: 5px solid #FEC260;
+    border-collapse: collapse;
+    font-size: 25px;
+}
+
+table {
+    width: 1920px;
+    position: relative;
+    text-align: justify;
+    table-layout: fixed;
+    border-radius: 10px;
+}
+
+img {
+    width: 50%;
+    text-align:center;
+}
+
+td {
+    color: #FEC260;
+    max-width: 300px;
+    padding: 15px;
+}
+
+tr {
+    max-width: 300px;
+    color: #FEC260;
+    border-radius: 10px;
+}
+
+th {
+    font-size: 25px;
+    text-align: center;
+}
+
+

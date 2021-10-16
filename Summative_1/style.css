@@ -1,0 +1,152 @@
+body{
+	font-family: comfortaa;
+	color: #FFFFFF;
+}
+
+.mainBox{
+	position: absolute;
+	width: 1446px;
+	height: 787px;
+	top: 53px;
+	left: 237px;
+
+	background: #C4C4C4;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 20px;
+}
+
+.titleBox{
+	position: absolute;
+	width: 1373px;
+	height: 53px;
+	top: 28px;
+	left: 28px;
+
+	background: #000000;
+	border: 1px solid #000000;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 20px 20px 0px 0px;
+}
+
+.box1{
+	position: absolute;
+	width: 1373px;
+	height: 152px;
+	top: 99px;
+	left: 28px;
+
+	background: #C4C4C4;
+	border: 1px solid #000000;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 0px 20px 20px 20px;
+}
+
+.box2{
+	position: absolute;
+	width: 1373px;
+	height: 239px;
+	top: 282px;
+	left: 28px;
+
+	background: #C4C4C4;
+	border: 1px solid #000000;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 0px 20px 20px 20px;
+	}
+
+.box3{
+	position: absolute;
+	width: 1373px;
+	height: 202px;
+	top: 551px;
+	left: 28px;
+
+	background: #C4C4C4;
+	border: 1px solid #000000;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 0px 20px 20px 20px;
+}
+
+.sectionBox{
+	position: absolute;
+	
+  	justify-content: center;
+  	align-items: center;
+	width: 255px;
+	height: 30px;
+
+	background: #000000;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 0px 0px 10px 0px;	
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.labelBox{ /*label for forms*/
+	position: absolute;
+	font-family: Comfortaa;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 16px;
+	color: black;
+}
+
+.formBox{
+	background: #C4C4C4;
+	position: absolute;
+	border-radius: 5px;
+	height: 30px;
+}
+
+input[type=text], select {
+  width: 100%;
+  height: 30px;
+  font-family: comfortaa;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type=date], select {
+  width: 100%;
+  height: 30px;
+  font-family: comfortaa;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+
+input[type=submit] {
+  width: 100%;
+  height: 100%;
+  font-family: comfortaa;
+  background-color: #C4C4C4;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+	font-family: comfortaa;
+  background-color: #000000;
+  border: 1px solid white;
+  color: white;
+}
+
+
+

@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body{
+	background: lightblue;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+.layout{
+	position: relative;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	width:	700px;
+	height:	700px;
+	background: lightblue;
+	box-shadow: 0 35px 55px rgba(0,0,0,0.1);
+}
+.layout .upper{
+	position: relative;
+	background: #6495ED;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	padding: 25px;
+}
+.layout .upper h2{
+	color: #fff;
+	font-size: 1.5em;
+	margin-top: 20px;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 600;
+	line-height: 1.4em;
+}
+	
+.layout .lower{
+	position: relative;
+	background: #fff;
+	overflow: hidden;
+}
+.box{
+	position: relative;
+	display: flex;
+	background: lightblue;
+	flex-direction: column;
+	align-items: center;
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.box .imageBox{
+	position: relative;
+	width: 700px;
+	height: 600px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	overflow: hidden;
+}
+.box .imageBox img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.innerbox{
+	position: relative;
+	background: #fff;
+	width:	500px;
+	height: 300px;
+	margin: 15%;
+	opacity: 0.5;
+	border-radius: 25px;
+}
+.text{
+  text-align: center;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  margin-top: 25px;
+  top: 40%;	
+  left: 45%;
+  transform: translate(-43%, -50%);
+  color: Black;
+}
+sb{
+	position: relative;
+	background: #fff;
+	width:	20px;
+	height: 20px;
+}

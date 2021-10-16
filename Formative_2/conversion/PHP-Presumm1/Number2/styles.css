@@ -1,0 +1,54 @@
+body {
+    background-color:rgb(255, 255, 255);
+    font-family: 'Arial';
+}
+
+#welcomeBody{
+    background-color: rgb(255, 188, 188);
+}
+
+table, th, td, tr {
+    border: 1px solid rgb(0, 0, 0);
+    font: x-large;
+}
+
+table {
+    width: calc(50% + 100px);
+    margin: 5px;
+    
+}
+
+th {
+    background-color: yellow;
+    font-weight: bold;
+    font-style: italic;
+}
+
+td {
+    text-align: center;
+}
+
+input {
+    width: 100px;
+}
+
+#inputFrame {
+    border-radius: 25px;
+    background:rgb(214, 110, 110);
+    background-color: rgb(214, 110, 110);
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#inputBody {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.welcomeHeader{
+    padding: 60px;
+    text-align: left;
+    font-size: 30px;
+    background-color: red;
+    background: red;
+    color: white;
+}
