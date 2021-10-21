@@ -6,9 +6,9 @@
 <head>
 
     <!-- STYLE SHEET -->
-	<link rel="stylesheet" href="indexStyle.css" />
+	<link rel="stylesheet" href="index.css" />
 	<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
-    <title>TA1 Index</title>
+    <title>FA5 Index</title>
 </head>
 
 	<body>
