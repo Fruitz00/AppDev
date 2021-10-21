@@ -1,14 +1,15 @@
 body {
     margin: 0;
     padding: 0;
-    background: #ADD2A2;
+    background-color: #2A0944;
+    color: #FEC260;
     font-family: 'Comfortaa';
 }
 
 .box{    
     margin: 1rem auto;    
     padding: 3rem;
-    background: white;
+    background: #A12568;
     width: 45rem;
     height: 70%;
     border-radius: 0.5rem;
@@ -29,8 +30,7 @@ hr {
 }
 
 .innerbox {
-    margin-top: 30px;
-    background: #FFFFF3;
+    background: #A12568;
     border-radius: 0.5rem;
     height: 50%;
     padding-top: 3rem;
@@ -64,8 +64,8 @@ p{
 input[type=submit]{
     float:  left;
     border-radius: 0.3rem;
-    background-color: #CAF0C0; 
-    color: black;
+    background-color: #FEC260; 
+    color: #2A0944;
     padding: 5px;
     font-size: 16px;
     margin-top: 30px;
@@ -78,28 +78,26 @@ input[type=submit]{
 .back {
     text-align: center;
     border-radius: 0.3rem;
-    background-color: #ADEA9C; 
+    background-color: #2A0944; 
     border: none;
     color: white;
     padding: 10px;
     font-size: 16px;
-    margin-top: 30px;
     width : 200px;
     height : 50px;
 }
 
 a:link {
-    color:  black;
+    color:  #FEC260;
     text-decoration: none;
 }
 
 a:visited {
-    color:  black;
+    color:  #FEC260;
     text-decoration: none;
 }
 
 a:hover {
     color: white;
+   
 }
-
-
