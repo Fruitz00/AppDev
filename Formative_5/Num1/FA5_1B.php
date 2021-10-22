@@ -72,7 +72,7 @@
     			</div>
 			</div> <!-- eof  nnerbox -->		
 				<div class = "button">
-					<button type = "button" class = "back"> <a href = "index.php"> Back to Index page  </a></button>
+					<button type = "button" class = "back"> <a href = "../index.php"> Back to Index page  </a></button>
 				</div> <!-- eof button -->
 
 </div> <!-- eof box -->

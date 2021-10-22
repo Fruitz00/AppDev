@@ -1,0 +1,34 @@
+body{
+    background-color: #2A0944;
+}
+
+table, th, td {
+    border: 1px solid black;
+    height: 100px;
+    font-family: 'Comfortaa';
+    font-size: 1.5rem;
+}
+
+table{
+    background-color:#FEC260;
+    width: 50%;
+    text-align: center;
+}
+
+td {
+    width: 300px;
+    background-color: #A12568;
+    color: #FEC260;
+    
+}
+
+input {
+    height: 50px;
+    width: 50%;
+    background-color: #FEC260;
+    border: 0px;
+}
+
+.headerBox {
+    background-color: yellow;
+}
