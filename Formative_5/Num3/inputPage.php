@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel = "stylesheet" href = "styles.css">
+<link rel = "stylesheet" href = "FA5-3STYLES.css">
 <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
 </head>
 <form method = "post" action = "outputPage.php">  

@@ -10,7 +10,7 @@
 	
 
 	<!-- STYLE SHEET -->
-	<link rel="stylesheet" href="1Astyle.css" />
+	<link rel="stylesheet" href="2Astyle.css" />
 	<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
 
 	<title>FA5 - 2A</title>
