@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #2A0944;
+    color: #FEC260;
+    font-family: 'Comfortaa';
+}
+
+.box{    
+    margin: 1rem auto;    
+    padding: 3rem;
+    background: #A12568;
+    width: 45rem;
+    height: 70%;
+    border-radius: 0.5rem;
+}
+
+h1 {
+    vertical-align: middle;
+    margin: auto;
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+hr {
+  border-top: 3px dashed;
+  margin-top: 30px;
+}
+
+.innerbox {
+    background: #A12568;
+    border-radius: 0.5rem;
+    height: 50%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 30%;
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+}
+
+label {
+  width: 400px;
+  line-height: 30px;
+  margin-right: 1px;
+}
+
+input {
+  height: 20px;
+  flex: 0 0 200px;
+  margin-left: 10px;
+
+}
+
+p{
+  margin-left: 5px;  
+  text-align: left;
+  line-height: 2rem;
+
+}
+
+input[type=submit]{
+    float:  left;
+    border-radius: 0.3rem;
+    background-color: #FEC260; 
+    color: #2A0944;
+    padding: 5px;
+    font-size: 16px;
+    margin-top: 30px;
+    width : 100px;
+    height : 30px;
+    border: none;
+}
+
+
+.back {
+    text-align: center;
+    border-radius: 0.3rem;
+    background-color: #2A0944; 
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    width : 200px;
+    height : 50px;
+}
+
+a:link {
+    color:  #FEC260;
+    text-decoration: none;
+}
+
+a:visited {
+    color:  #FEC260;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+   
+}
