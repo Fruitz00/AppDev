@@ -1,6 +1,5 @@
 <?php
-    $dog_id = 1;
-    if(isset($_POST['save'])){
+    if(isset($_POST['submit'])){
         $name = $_POST['name'];
         $breed = $_POST['breed'];
         $age = $_POST['age'];
@@ -9,18 +8,22 @@
         $height = $_POST['height'];
         $weight = $_POST['weight'];
         
-        echo $name;
         
         //validation
         include 'dbcon.php';
-        $sql = "INSERT INTO dogs(dog_id, name, breed, age, address, color, height, weight)
-                    VALUES($dog_id,$name,$breed,$age,$address,$color,$height,$weight)"
+
+        $sql = "INSERT INTO dogs(`name`, `breed`, `age`, `address`, `color`, `height`, `weight`)
+                    VALUES('$name','$breed','$age','$address','$color','$height','$weight')";
+        
         $result = mysqli_query($conn, $sql);
         if($result){
-            echo "Submitted Successfully";
+            // echo "Submitted Successfully";
         }else{
-            echo "Error Occured;"
+            // echo "Error Occured";
         }
+    }
+    else{
+        echo "hello";
     }
 ?>
 
@@ -79,7 +82,7 @@
                 
             <!-- weight Input -->
             <div class="form-outline mb-4">
-            <input type="number" name ="height" class="form-control" required = "">
+            <input type="number" name ="weight" class="form-control" required = "">
             <label class="form-label" for="form1Example2">Weight</label>
             </div>
         
