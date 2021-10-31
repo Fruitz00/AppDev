@@ -1,4 +1,5 @@
 <?php
+    $dog_id = 1;
     if(isset($_POST['save'])){
         $name = $_POST['name'];
         $breed = $_POST['breed'];
@@ -8,7 +9,18 @@
         $height = $_POST['height'];
         $weight = $_POST['weight'];
         
-       echo $name;
+        echo $name;
+        
+        //validation
+        include 'dbcon.php';
+        $sql = "INSERT INTO dogs(dog_id, name, breed, age, address, color, height, weight)
+                    VALUES($dog_id,$name,$breed,$age,$address,$color,$height,$weight)"
+        $result = mysqli_query($conn, $sql);
+        if($result){
+            echo "Submitted Successfully";
+        }else{
+            echo "Error Occured;"
+        }
     }
 ?>
 
@@ -28,68 +40,51 @@
         <br><br>
         <h1 align = "center">Dog Information</h1>
         <br>
-        <form>
+        <form method = "post">
             <!-- Email input -->
             <div class="form-outline mb-4">
-            <input type="text" name ="name" class="form-control">
+            <input type="text" name ="name" class="form-control" required = "">
             <label class="form-label" for="form1Example1">Name</label>
             </div>
         
             <!-- Password input -->
             <div class="form-outline mb-4">
-            <input type="text" name ="breed" class="form-control">
+            <input type="text" name ="breed" class="form-control" required = "">
             <label class="form-label" for="form1Example2">Breed</label>
             </div>
             
             <!-- age input -->
             <div class="form-outline mb-4">
-            <input type="number" name ="age" class="form-control" min = "0" max = "90">
+            <input type="number" name ="age" class="form-control" min = "0" max = "90" required = "">
             <label class="form-label" for="form1Example2">Age</label>
             </div>
 
             <!-- address input -->
             <div class="form-outline mb-4">
-            <input type="text" name ="address" class="form-control" >
+            <input type="text" name ="address" class="form-control"  required = "">
             <label class="form-label" for="form1Example2">Address</label>
             </div>
             
             <!-- color input -->
             <div class="form-outline mb-4">
-            <input type="text" name ="color" class="form-control" >
+            <input type="text" name ="color" class="form-control"  required = "">
             <label class="form-label" for="form1Example2">Color</label>
             </div>
 
             <!-- height Input -->
             <div class="form-outline mb-4">
-            <input type="number" name ="height" class="form-control" >
+            <input type="number" name ="height" class="form-control"  required = "">
             <label class="form-label" for="form1Example2">Height</label>
             </div>
                 
             <!-- weight Input -->
             <div class="form-outline mb-4">
-            <input type="number" name ="height" class="form-control" />
+            <input type="number" name ="height" class="form-control" required = "">
             <label class="form-label" for="form1Example2">Weight</label>
-            </div>
-
-            <!-- 2 column grid layout for inline styling -->
-            <div class="row mb-4">
-            <div class="col d-flex justify-content-center">
-                <!-- Checkbox -->
-                <div class="form-check">
-                <input
-                    class="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="form1Example3"
-                    checked
-                />
-                <label class="form-check-label" for="form1Example3"> Remember me </label>
-                </div>
-            </div>
             </div>
         
             <!-- Submit button -->
-            <button type="submit" class="btn btn-primary btn-block" name = "save">Save</button>
+            <input type="submit" class="btn btn-primary btn-block" name = "submit" value = "Submit"></button>
         </form>
     </div>
 </body>
