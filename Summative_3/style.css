@@ -1,0 +1,25 @@
+.regBox{
+   margin: auto;
+   width: 400px;
+}
+
+h2{
+   align-items: center;
+
+}
+
+.outline {
+   margin-top: 1%;
+   position: relative;
+   display: grid;
+	grid-template-columns: auto auto auto auto;
+   grid-gap: 5px;
+
+   left: 1%;
+}
+.dispBox{
+   padding: 2%;
+   border:  1px solid;
+   border-radius: 2%;
+   width: 350px;
+}
