@@ -57,13 +57,13 @@
 
             <!-- Password -->
             <div class="form-outline mb-4">
-            <input type="text" name ="pass" class="form-control" required = "">
+            <input type="password" name ="pass" class="form-control" required = "">
             <label class="form-label" for="form1Example1">Password</label>
             </div>
 
             <!-- Confirm Password -->
             <div class="form-outline mb-4">
-            <input type="text" name ="pass" class="form-control" required = "">
+            <input type="password" name ="pass" class="form-control" required = "">
             <label class="form-label" for="form1Example1">Confirm Password</label>
             </div>
 
