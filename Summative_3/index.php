@@ -1,97 +1,43 @@
-<?php
-    if(isset($_POST['submit'])){
-        $fName = $_POST['fName'];
-        $mName = $_POST['mName'];
-        $lName = $_POST['lName'];
-        $userName = $_POST['userName'];
-        $password = $_POST['pass'];
-        $bday = $_POST['bday'];
-        $email = $_POST['email'];
-        $contactNumber = $_POST['contactNumber'];
-        
-        include 'db_con.php';
+<!-- INDEX OF ALL OTHER PROGRAMS -->
 
-        $sql = "INSERT INTO accounts(`First_Name`,`Middle_Name`,`Last_Name`,`user_name`,`password`,`birthday`,`email`,`contact_number`)
-                    VALUES('$fName','$mName','$lName','$userName','$password','$bday','$email','$contactNumber')";
-        
-        $result = mysqli_query($conn, $sql);
-        if($result){
-            // echo "Submitted Successfully";
-        }else{
-            // echo "Error Occured";
-        }
-    }
+<!DOCTYPE html>
 
-    include 'header.php';
-?>
+<html lang = 'en' xmlns = "http://www.w3.org/1999/xthml">
+<head>
 
-<body>
-    <div class="regBox">
-        <br><br>
-        <h2 align = "center">My Personal Information</h2>
-        <br>
-        <form method = "post">
-            <!-- First Name -->
-            <div class="form-outline mb-4">
-            <input type="text" name ="fName" class="form-control" required = "">
-            <label class="form-label" for="form1Example1">First Name</label>
-            </div>
+    <!-- STYLE SHEET -->
+	<link rel="stylesheet" href="index.css" />
+	<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+    <title>FA5 Index</title>
+</head>
 
-            <!-- Middle Name -->
-            <div class="form-outline mb-4">
-            <input type="text" name ="mName" class="form-control" required = "">
-            <label class="form-label" for="form1Example1">Middle Name</label>
-            </div>
+	<body>
+		<div class = "box">
+			<div class = "header">
+				<h1> INDEX FOR FORMATIVE 5  </h1> 
 
-            <!-- Last Name -->
-            <div class="form-outline mb-4">
-            <input type="text" name ="lName" class="form-control" required = "">
-            <label class="form-label" for="form1Example1">Last Name</label>
-            </div>
+				<p> by: <br><br>
+					Kyle Sebastian Claveria --- Junelle Espero --- Charles Dmitri Peñaranda --- Ella Fritz Sarmiento  </p>
+			</div> <!-- eof header -->
 
-            <!-- User Name -->
-            <div class="form-outline mb-4">
-            <input type="text" name ="userName" class="form-control" required = "">
-            <label class="form-label" for="form1Example1">User Name</label>
-            </div>
+			<hr>
+			<div class = "buttons">
+				<button type = "button" class = "btn"> <a href="Num1/FA5_1A.php"> FA5 - 1A</a> </button>
 
-            <!-- Password -->
-            <div class="form-outline mb-4">
-            <input type="password" name ="pass" class="form-control" required = "">
-            <label class="form-label" for="form1Example1">Password</label>
-            </div>
+				<br>
 
-            <!-- Confirm Password -->
-            <div class="form-outline mb-4">
-            <input type="password" name ="pass" class="form-control" required = "">
-            <label class="form-label" for="form1Example1">Confirm Password</label>
-            </div>
+				<button type = "button" class = "btn"> <a href = "Num1/FA5_1B.php"> FA5 - 1B</a> </button>
 
-            <!-- Birthday -->
-            <div class="form-outline mb-4">
-            <input type="date" name ="bday" class="form-control" required = "">
-            <label class="form-label" for="form1Example1">Birthday</label>
-            </div>
+				<br>
 
-            <!-- Email -->
-            <div class="form-outline mb-4">
-            <input type="text" name ="email" class="form-control" required = "">
-            <label class="form-label" for="form1Example1">Email</label>
-            </div>
-        
-            <!-- Contact Number -->
-            <div class="form-outline mb-4">
-            <input type="text" name ="contactNumber" class="form-control" required = "">
-            <label class="form-label" for="form1Example1">Contact Number</label>
-            </div>
-        
-            <!-- Submit button -->
-            <input type="submit" class="btn btn-primary btn-block" name = "submit" value = "Submit"></button>
+				<button type = "button" class = "btn"> <a href = "Num2/FA5_2A.php"> FA5 - 2 </a> </button>
 
-            <!-- Show button -->
-            <button onclick="myFunction()" class="btn btn-primary btn-block" style = "margin-left: 134px">Show Database</button>
-        </form>
-    </div>
+				<br>
 
-</body>
+				<button type = "button" class = "btn"> <a href = "Num3/inputPage.php">FA5 - 3</a> </button>
+
+			</div> <!-- eof buttons -->
+
+		</div> <!-- eof box -->
+	</body>
 </html>
