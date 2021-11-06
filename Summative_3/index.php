@@ -14,7 +14,7 @@
 	<body>
 		<div class = "box">
 			<div class = "header">
-				<h1> INDEX FOR FORMATIVE 5  </h1> 
+				<h1> INDEX FOR SUMMATIVE 3  </h1> 
 
 				<p> by: <br><br>
 					Kyle Sebastian Claveria --- Junelle Espero --- Charles Dmitri Peñaranda --- Ella Fritz Sarmiento  </p>
