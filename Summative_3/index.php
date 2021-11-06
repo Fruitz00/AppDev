@@ -22,19 +22,11 @@
 
 			<hr>
 			<div class = "buttons">
-				<button type = "button" class = "btn"> <a href="Num1/FA5_1A.php"> FA5 - 1A</a> </button>
+				<button type = "button" class = "btn"> <a href="Pages/Registration_A.php">Activity A</a> </button>
 
 				<br>
 
-				<button type = "button" class = "btn"> <a href = "Num1/FA5_1B.php"> FA5 - 1B</a> </button>
-
-				<br>
-
-				<button type = "button" class = "btn"> <a href = "Num2/FA5_2A.php"> FA5 - 2 </a> </button>
-
-				<br>
-
-				<button type = "button" class = "btn"> <a href = "Num3/inputPage.php">FA5 - 3</a> </button>
+				<button type = "button" class = "btn"> <a href = "Pages/Registration_B.php">Activity B</a> </button>
 
 			</div> <!-- eof buttons -->
 
