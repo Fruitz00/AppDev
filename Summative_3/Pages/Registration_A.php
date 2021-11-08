@@ -93,5 +93,21 @@
         </form>
     </div>
 
+<?php 
+    if(isset($_POST['submit'])){
+        echo("<div class = 'regbox' align = 'center' border-width: 2px>");
+        print("Your Entered Values are:"."\n"); echo '<br>';
+        echo("Full Name: $lName".", ".$fName." ".$mName."<br>");
+        echo("Username: $userName <br>");
+        echo("Password: $password <br>");
+        echo("Birthday: $bday <br>");
+        echo("E-mail: $email<br>");
+        echo("Contact Number: $contactNumber");    
+        echo("</div>")  ;
+    }
+
+?>
+
+
 </body>
 </html>
