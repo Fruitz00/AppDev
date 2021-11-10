@@ -5,20 +5,25 @@
         $lName = $_POST['lName'];
         $userName = $_POST['userName'];
         $password = $_POST['pass'];
+        $cpassword = $_POST['cpass'];
         $bday = $_POST['bday'];
         $email = $_POST['email'];
         $contactNumber = $_POST['contactNumber'];
-        
-        include 'db_con.php';
+         
+        if ($password == $cpassword){
+            include 'db_con.php';
 
-        $sql = "INSERT INTO accounts(`First_Name`,`Middle_Name`,`Last_Name`,`user_name`,`password`,`birthday`,`email`,`contact_number`)
-                    VALUES('$fName','$mName','$lName','$userName','$password','$bday','$email','$contactNumber')";
-        
-        $result = mysqli_query($conn, $sql);
-        if($result){
-            // echo "Submitted Successfully";
+            $sql = "INSERT INTO accounts(`First_Name`,`Middle_Name`,`Last_Name`,`user_name`,`password`,`birthday`,`email`,`contact_number`)
+                        VALUES('$fName','$mName','$lName','$userName','$password','$bday','$email','$contactNumber')";
+            
+            $result = mysqli_query($conn, $sql);
+            if($result){
+                // echo "Submitted Successfully";
+            }else{
+                // echo "Error Occured";
+            }
         }else{
-            // echo "Error Occured";
+            //error 
         }
     }
 
@@ -63,7 +68,7 @@
 
             <!-- Confirm Password -->
             <div class="form-outline mb-4">
-            <input type="password" name ="pass" class="form-control" required = "">
+            <input type="password" name ="cpass" class="form-control" required = "">
             <label class="form-label" for="form1Example1">Confirm Password</label>
             </div>
 
@@ -94,16 +99,21 @@
     </div>
 
 <?php 
-    if(isset($_POST['submit'])){
+    if ($password == $cpassword){
+        if(isset($_POST['submit'])){
+            echo("<div class = 'regbox' align = 'center' border-width: 2px>");
+            print("Your Entered Values are:"."\n"); echo '<br>';
+            echo("Full Name: $lName".", ".$fName." ".$mName."<br>");
+            echo("Username: $userName <br>");
+            echo("Password: $password <br>");
+            echo("Birthday: $bday <br>");
+            echo("E-mail: $email<br>");
+            echo("Contact Number: $contactNumber");    
+            echo("</div>")  ;
+        }
+    } else {
         echo("<div class = 'regbox' align = 'center' border-width: 2px>");
-        print("Your Entered Values are:"."\n"); echo '<br>';
-        echo("Full Name: $lName".", ".$fName." ".$mName."<br>");
-        echo("Username: $userName <br>");
-        echo("Password: $password <br>");
-        echo("Birthday: $bday <br>");
-        echo("E-mail: $email<br>");
-        echo("Contact Number: $contactNumber");    
-        echo("</div>")  ;
+        echo "password do not match";
     }
 
 ?>
