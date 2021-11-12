@@ -94,13 +94,15 @@
             <input type="submit" class="btn btn-primary btn-block" name = "submit" value = "Submit"></button>
 
             <!-- Show button -->
-            <button onclick="myFunction()" class="btn btn-primary btn-block" style = "margin-left: 134px">Show Database</button>
+            <button type = "button" class = "btn btn-primary btn-block" style = "margin-left: 251px"><a href = "Log_In_B.php">Login</a> </button>
         </form>
     </div>
 
 <?php 
-    if ($password == $cpassword){
-        if(isset($_POST['submit'])){
+    if(isset($_POST['submit'])){
+        $password = $_POST['pass'];
+        $cpassword = $_POST['cpass'];
+        if ($password == $cpassword){
             echo("<div class = 'regbox' align = 'center' border-width: 2px>");
             print("Your Entered Values are:"."\n"); echo '<br>';
             echo("Full Name: $lName".", ".$fName." ".$mName."<br>");
@@ -110,10 +112,10 @@
             echo("E-mail: $email<br>");
             echo("Contact Number: $contactNumber");    
             echo("</div>")  ;
+        } else {
+            echo("<div class = 'regbox' align = 'center' border-width: 2px>");
+            echo "password do not match";
         }
-    } else {
-        echo("<div class = 'regbox' align = 'center' border-width: 2px>");
-        echo "password do not match";
     }
 
 ?>

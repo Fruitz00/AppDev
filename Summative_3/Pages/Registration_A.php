@@ -94,27 +94,31 @@
             <input type="submit" class="btn btn-primary btn-block" name = "submit" value = "Submit"></button>
 
             <!-- Show button -->
-            <button onclick="myFunction()" class="btn btn-primary btn-block" style = "margin-left: 134px">Show Database</button>
+            <button type = "button" class = "btn btn-primary btn-block" style = "margin-left: 251px"><a href = "A_2.php">Login</a> </button>
         </form>
     </div>
 
 <?php 
-    if ($password == $cpassword){
+
+    
         if(isset($_POST['submit'])){
-            echo("<div class = 'regbox' align = 'center' border-width: 2px>");
-            print("Your Entered Values are:"."\n"); echo '<br>';
-            echo("Full Name: $lName".", ".$fName." ".$mName."<br>");
-            echo("Username: $userName <br>");
-            echo("Password: $password <br>");
-            echo("Birthday: $bday <br>");
-            echo("E-mail: $email<br>");
-            echo("Contact Number: $contactNumber");    
-            echo("</div>")  ;
+            $password = $_POST['pass'];
+            $cpassword = $_POST['cpass'];
+            if ($password == $cpassword){
+                echo("<div class = 'regbox' align = 'center' border-width: 2px>");
+                print("Your Entered Values are:"."\n"); echo '<br>';
+                echo("Full Name: $lName".", ".$fName." ".$mName."<br>");
+                echo("Username: $userName <br>");
+                echo("Password: $password <br>");
+                echo("Birthday: $bday <br>");
+                echo("E-mail: $email<br>");
+                echo("Contact Number: $contactNumber");    
+                echo("</div>")  ;
+            } else {
+                 echo("<div class = 'regbox' align = 'center' border-width: 2px>");
+                 echo "password do not match";
+            }
         }
-    } else {
-        echo("<div class = 'regbox' align = 'center' border-width: 2px>");
-        echo "password do not match";
-    }
 
 ?>
 
