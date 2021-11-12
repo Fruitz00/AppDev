@@ -1,6 +1,6 @@
 <?php
     include 'header.php';
-    include 'function.php';
+    include 'function_A.php';
     user_login();
 
     if(isset($_SESSION['USERNAME'])&& isset($_SESSION['PASSWORD'])){

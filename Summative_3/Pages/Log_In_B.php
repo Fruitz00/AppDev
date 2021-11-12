@@ -5,9 +5,9 @@
 
     if(isset($_SESSION['username']) && isset($_SESSION['password']))
     {
-        header("location:dashboard.php");
+        header("location:dashboard_B.php");
     }
-    
+
 ?>
 
 <body>
@@ -17,7 +17,7 @@
         <br><br>
         <h3 align = "center">Log In</h3>
         <br>
-        <form method = "post">
+        <form method = "post" action = "dashboard_B.php">
             <?php if(isset($_SESSION['MSG'])){
                 display_message();  
             }
