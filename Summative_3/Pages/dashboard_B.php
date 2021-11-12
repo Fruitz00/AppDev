@@ -9,33 +9,41 @@ if(!isset($_SESSION['USERNAME']) && isset($_SESSION['PASSWORD']))
 <body>
     <div class="regBox">
         <br><br>
-        <h2>User Information Form</h2>
+        <h2 align = "center">User Information Form</h2>
         <br>
-        <h4>Welcome:</h4>
-        <h4>Birthday:</h4>
-        <h4>Contact Details:</h4>
-        <h4>Email:</h4>
-        <h4>Contact No.:</h4>
+        <h4 align = "center">Welcome:</h4>
+            <h6 align = "center">Hello</h6>
+        <h4 align = "center">Birthday:</h4>
+            <h6 align = "center">Hello</h6>
+        <h4 align = "center">Contact Details:</h4>
+            <h6 align = "center">Hello</h6>
+        <h4 align = "center">Email:</h4>
+            <h6 align = "center">Hello</h6>
+        <h4 align = "center">Contact No.:</h4>
+            <h6 align = "center">Hello</h6>
         <br>
         <h4>Reset Password:</h4>
-        <div class="form-outline mb-4">
-
-        <form method = "post" >
-            <input type="text" name ="userName" class="form-control" required = "">
+        <form action="post">
+            <div class="form-outline mb-4">
+            <input type="text" name ="currentPass" class="form-control" required = "">
             <label class="form-label" for="form1Example1">Enter Current Password</label>
             </div>
 
-            <input type="text" name ="userName" class="form-control" required = "">
+            <div class="form-outline mb-4">
+            <input type="text" name ="newPass" class="form-control" required = "">
             <label class="form-label" for="form1Example1">Enter New Password</label>
             </div>
 
-            <input type="text" name ="userName" class="form-control" required = "">
+            <div class="form-outline mb-4">
+            <input type="text" name ="reNewPass" class="form-control" required = "">
             <label class="form-label" for="form1Example1">Re-Enter New Password</label>
             </div>
+            
+            <br>
+                <a href = "logout.php" class="btn btn-primary btn-block">Reset Password</a>
+        </form>
 
             <!-- Submit button -->
-            <br>
-            <a href = "logout.php" class="btn btn-primary btn-block">Logout</a>
-        </form>
+               
     </div>
 </body>
