@@ -20,13 +20,16 @@
             <!-- Username -->
             <div class="form-outline mb-4">
             <label class="form-label" for="form1Example1">Username</label>
-            <input type="text" name ="userName" class="form-control" required = "" value = "<?php if (isset($_COOKIE['namecookie'])) echo $_POST['userName'];?>">          
+            <input type="text" name ="userName" class="form-control" required = "" value = "
+                <?php if (isset($_COOKIE['namecookie'])) 
+                    echo $_POST['userName'];?>">          
             </div>
 
             <!-- Password -->
             <div class="form-outline mb-4">
             <label class="form-label" for="form1Example1">Password</label>
-            <input type="password" name ="pass" class="form-control" required = "" value ="<?php if (isset($_COOKIE['passcookie'])) echo $_POST['pass'];?>">
+            <input type="password" name ="pass" class="form-control" required = "" value ="
+                <?php if (isset($_COOKIE['passcookie'])) echo $_POST['pass'];?>">
             </div>
 
             <!-- Remember Me checkbox -->
