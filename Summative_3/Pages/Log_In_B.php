@@ -7,8 +7,7 @@
     {
         header("location:dashboard_B.php");
     }
-
-?>
+?> 
 
 <body>
     <div class="regBox">
@@ -17,11 +16,10 @@
         <br><br>
         <h3 align = "center">Log In</h3>
         <br>
-        <form method = "post" action = "dashboard_B.php">
+        <form  action = 'dashboard_B.php' method = "post">
             <?php if(isset($_SESSION['MSG'])){
                 display_message();  
             }
-                
             ?>
             <!-- User Name -->
             <div class="form-outline mb-4">
@@ -36,7 +34,7 @@
             </div>
 
             <!-- Submit button -->
-            <input type="submit" class="btn btn-primary btn-block" name = "login" value = "Login"></button>
+            <input type="submit" class="btn btn-primary btn-block" name = "login" value = "Login"></a></button>
 		    
         </form>
     </div>

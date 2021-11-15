@@ -94,7 +94,7 @@
             <input type="submit" class="btn btn-primary btn-block" name = "submit" value = "Submit"></button>
 
             <!-- Show button -->
-            <button type = "button" class = "btn btn-primary btn-block" style = "margin-left: 251px"><a href = "A_2.php">Login</a> </button>
+            <button type = "button" class = "btn btn-primary btn-block" style = "margin-left: 251px"><a href = "Log_In_A.php">Login</a> </button>
         </form>
     </div>
 

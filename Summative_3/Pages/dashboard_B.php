@@ -3,11 +3,6 @@ include 'header.php';
 include 'db_con.php';
 session_start();
 
-
-    if(!isset($_SESSION['USERNAME']) && isset($_SESSION['PASSWORD']))
-    {
-        header("location:A_2.php");
-    }
     
     if(isset($_POST['login'])){
         $username = $_SESSION['USERNAME'];

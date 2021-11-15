@@ -4,7 +4,7 @@ session_start();
 
 if(!isset($_SESSION['USERNAME']) && isset($_SESSION['PASSWORD']))
 {
-    header("location:A_2.php");
+    header("location:Log_In_A.php");
 }?>
 <body>
     <div class="regBox">
