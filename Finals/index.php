@@ -27,7 +27,7 @@
             <li><a href="#">About Us</a></li>
             <li><a href="#">Customers</a></li>
             <li><a href="#">Contact Us</a></li>
-            <li><a href="Pages/Log_In.html">Login</a></li>
+            <li><a href="Pages/Log_In.php">Login</a></li>
             <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
           </ul>
         </nav>
@@ -44,9 +44,11 @@
           <div class="animate__animated animate__backInLeft">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis voluptates ullam neque aspernatur velit dolore at aliquid est sequi. Nemo architecto.</p>
           </div>
-          <div class="animate__animated animate__bounceIn animate__delay-2s">
-            <div class="button">Register Now</div>
-          </div>
+          <a href="Pages/Registration.php">
+            <div class="animate__animated animate__bounceIn animate__delay-2s">
+              <div class="button">Register Now</div>
+            </div>
+          </a>
           <br>
         </div>
         <div class="col-2">

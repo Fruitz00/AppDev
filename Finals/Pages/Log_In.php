@@ -19,7 +19,7 @@
            <h2>Accounts <br> Login Page</h2>
            <br><br><br>
            <h5>No Registered Yet?<br>
-                <a href="Registration.html">Click Here!</a>
+                <a href="Registration.php">Click Here!</a>
            </h5>
         </div>
      </div>
