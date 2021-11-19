@@ -1,22 +1,3 @@
-<?php
-
-    function alert($msg) {
-        echo "<script type='text/javascript'>alert('$msg');</script>";
-    }
-
-    if(isset($_POST['submit'])){
-        $fName = $_POST['fName'];
-        $lName = $_POST['lName'];
-        $address = $_POST['address'];
-        $email = $_POST['email'];
-        $password = $_POST['pass'];
-        $confirmPass = $_POST['cpass'];
-
-        alert($fName);
-        print("NOOOOOOOOOOOOO");
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,49 +19,41 @@
            <h2>Accounts <br> Registration</h2>
            <br><br><br>
            <h5>Already Have an Account?<br>
-                <a href="Log_In.html">Click Here!</a>
+                <a href="Log_In.php">Click Here!</a>
            </h5>
         </div>
      </div>
      <div class="main">
         <div class="col-md-6 col-sm-12">
            <div class="login-form">
-              <form action= "" method="post">
+              <form action="" method="post">
                  <div class="form-group">
                     <label>First Name</label>
-                    <input type="text" name ="fName" class="form-control" required="">
+                    <input type="text" class="form-control" required="">
                  </div>
                  <div class="form-group">
                     <label>Last Name</label>
-                    <input type="text" name = "lName" class="form-control" required="">
+                    <input type="text" class="form-control" required="">
                  </div>
                  <div class="form-group">
                     <label>Address</label>
-                    <input type="text" name = "address" class="form-control" required="">
+                    <input type="text" class="form-control" required="">
                  </div>
                  <div class="form-group">
                     <label>Email</label>
-                    <input type="email" name ="email" class="form-control" required="">
+                    <input type="email" class="form-control" required="">
                  </div>
                  <div class="form-group">
                     <label>Password</label>
-                    <input type="password" name = "pass" class="form-control" required="">
+                    <input type="password" class="form-control" required="">
                  </div>
                  <div class="form-group">
                   <label>Confirm Password</label>
-                  <input type="password" name = "cpass" class="form-control" required="">
+                  <input type="password" class="form-control" required="">
                </div>
-                 <button type="submit" value = "Aeugh" class="btn btn-black">Register</button>
+                 <button type="submit" class="btn btn-black">Register</button>
               </form>
-               <?php 
-                  if(isset($_POST['submit'])){
-                     echo ($fName);
-                     echo ("YOU ARE A FAG");
-                     alert("Hi there");
-                  }
-                  echo("No!");
-               
-               ?>
+
            </div>
         </div>
      </div>
