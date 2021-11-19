@@ -11,4 +11,5 @@
     }
 
     header("location: Log_In_A2.php")
+    header("location: Log_In_A.php")
 ?>

@@ -4,6 +4,11 @@ session_start();
 
 if(isset($_SESSION['USERNAME']) && isset($_SESSION['PASSWORD'])){
     header("location: Log_In_A2.php");
+
+if(!isset($_SESSION['USERNAME']) && isset($_SESSION['PASSWORD']))
+{
+    header("location:Log_In_A.php");
+
 }?>
 <body>
     <div class="regBox">
