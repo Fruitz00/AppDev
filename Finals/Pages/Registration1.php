@@ -1,38 +1,31 @@
 <?php
-   if(isset($_POST['submit'])){
-      $fName = $_POST['fName'];
-      $lName = $_POST['lName'];
-      $address = $_POST['address'];
-      $username = $_POST['username'];
-      $email = $_POST['email'];
-      $password = $_POST['pass'];
-      $confirmPass = $_POST['cpass'];
-
-      if ($password == $cpassword){
-         include 'db_con.php';
-         $sql = "INSERT INTO users (USERNAME,
-                                 FIRST_NAME,
-                                 LAST_NAME,
-                                 ADDRESS,
-                                 EMAIL,
-                                 PASSWORD) 
-         VALUES ('$username','$fName','$lname','$address','$email','$password')";
+    if(isset($_POST['submit'])){
+        $fName = $_POST['fName'];
+        $lName = $_POST['lName'];
+        $address = $_POST['address'];
+        $userName = $_POST['username'];
+        $email = $_POST['email'];
+        $pass = $_POST['pass'];
+        $cpass = $_POST['cpass'];
          
-         $result = mysqli_query($conn, $sql);
-         if($result){
-            $isConnected = true;
-            echo "Submitted Successfully";
-         }else{
-            echo "Error Occured";
-         }
-      }else{
-         //error 
-      }
+        if ($pass == $cpass){
+            include 'db_con.php';
 
-      alert($fName);
-      print("NOOOOOOOOOOOOO");
-   }
+            $sql = "INSERT INTO users(`FIRST_NAME`,`LAST_NAME`,`ADDRESS`,`USERNAME`,`EMAIL`,`PASSWORD`)
+                        VALUES('$fName','$lName','$address','$userName','$email','$pass')";
+            
+            $result = mysqli_query($conn, $sql);
+            if($result){
+                // echo "Submitted Successfully";
+            }else{
+                // echo "Error Occured";
+            }
+        }else{
+            //error 
+        }
+    }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -62,7 +55,7 @@
      <div class="main">
         <div class="col-md-6 col-sm-12">
            <div class="login-form">
-              <form action= "outputPage.php" method="post">
+              <form  method="post">
                  <div class="form-group">
                     <label>First Name</label>
                     <input type="text" name ="fName" class="form-control" required="">
@@ -91,13 +84,10 @@
                   <label>Confirm Password</label>
                   <input type="password" name = "cpass" class="form-control" required="">
                </div>
-                 <button type="submit" value = "Aeugh" class="btn btn-black">Register</button>
+                 <button type="submit" name = "submit" value = "submit" class="btn btn-black">Register</button>
               </form>
            </div>
         </div>
      </div>
-
-
-
 </body>
 </html>
