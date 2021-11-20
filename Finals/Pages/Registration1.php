@@ -1,20 +1,37 @@
 <?php
+   if(isset($_POST['submit'])){
+      $fName = $_POST['fName'];
+      $lName = $_POST['lName'];
+      $address = $_POST['address'];
+      $username = $_POST['username'];
+      $email = $_POST['email'];
+      $password = $_POST['pass'];
+      $confirmPass = $_POST['cpass'];
 
-    function alert($msg) {
-        echo "<script type='text/javascript'>alert('$msg');</script>";
-    }
+      if ($password == $cpassword){
+         include 'db_con.php';
+         $sql = "INSERT INTO users (USERNAME,
+                                 FIRST_NAME,
+                                 LAST_NAME,
+                                 ADDRESS,
+                                 EMAIL,
+                                 PASSWORD) 
+         VALUES ('$username','$fName','$lname','$address','$email','$password')";
+         
+         $result = mysqli_query($conn, $sql);
+         if($result){
+            $isConnected = true;
+            echo "Submitted Successfully";
+         }else{
+            echo "Error Occured";
+         }
+      }else{
+         //error 
+      }
 
-    if(isset($_POST['submit'])){
-        $fName = $_POST['fName'];
-        $lName = $_POST['lName'];
-        $address = $_POST['address'];
-        $email = $_POST['email'];
-        $password = $_POST['pass'];
-        $confirmPass = $_POST['cpass'];
-
-        alert($fName);
-        print("NOOOOOOOOOOOOO");
-    }
+      alert($fName);
+      print("NOOOOOOOOOOOOO");
+   }
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +62,7 @@
      <div class="main">
         <div class="col-md-6 col-sm-12">
            <div class="login-form">
-              <form action= "" method="post">
+              <form action= "outputPage.php" method="post">
                  <div class="form-group">
                     <label>First Name</label>
                     <input type="text" name ="fName" class="form-control" required="">
@@ -57,6 +74,10 @@
                  <div class="form-group">
                     <label>Address</label>
                     <input type="text" name = "address" class="form-control" required="">
+                 </div>
+                 <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" name ="username" class="form-control" required="">
                  </div>
                  <div class="form-group">
                     <label>Email</label>
@@ -72,15 +93,6 @@
                </div>
                  <button type="submit" value = "Aeugh" class="btn btn-black">Register</button>
               </form>
-               <?php 
-                  if(isset($_POST['submit'])){
-                     echo ($fName);
-                     echo ("YOU ARE A FAG");
-                     alert("Hi there");
-                  }
-                  echo("No!");
-               
-               ?>
            </div>
         </div>
      </div>
