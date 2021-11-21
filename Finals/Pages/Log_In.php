@@ -1,3 +1,17 @@
+<?php
+   session_start();
+
+   require_once "db_con.php";
+   $username = $password = "";
+   $username_err = $password_err = $login_err = "";
+
+   //If Form is submitted?
+   if($_SERVER['REQUEST_MEHTOD'] == "POST"){
+      
+   }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
