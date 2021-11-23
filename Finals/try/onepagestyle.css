@@ -1,0 +1,79 @@
+*{
+	margin:  0;
+	padding: 0;
+}
+
+body{
+    color: blue;
+    font-family: 'Oswald', sans-serif;
+    font-size: 100%;
+}
+
+div, section, span, ul, li, a {
+	box-sizing: border-box;
+}
+
+/* CSS reset */
+
+.navbar{
+	width: 100%;
+	background-color: white;
+	display: inline-block;
+	position: fixed;
+	align-items: center;
+	padding: 20px 50px;
+	justify-content: space-between;
+
+    color: black;
+
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+
+}
+
+
+#menubar li {
+	list-style: none;
+	display: inline-block;
+	margin: 20px;	
+}
+
+#menubar li a{
+	color: black;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+section{
+	width: 100%;
+	height: 100vh;
+	float: left;
+}
+
+#home{
+	background: url("images/blackbg.png");
+	color: white;
+}
+
+#about{
+	background-color: white;
+	color: black;	
+}
+
+#products{
+	background-color: black;
+	color: white;
+}
+
+#customers{
+	background-color: white;
+	color: black;
+}
+
+
+#contact{
+	background-color: black;
+	color: white;
+}
+
