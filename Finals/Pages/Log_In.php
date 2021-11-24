@@ -1,14 +1,56 @@
 <?php
-   session_start();
 
    require_once "db_con.php";
    $username = $password = "";
    $username_err = $password_err = $login_err = "";
+   $stmt = "SELECT username, email, password from users where username = $username,";
 
-   //If Form is submitted?
-   if($_SERVER['REQUEST_MEHTOD'] == "POST"){
-      
+   if (isset($_POST['submit'])){
+      $username = $_POST['username'];
+      $password = $_POST['password'];
+      $stmt = "SELECT username, email, password from users where username = $username,";
+      //Validate Credentials
+
+      if($stmt = mysqli_prepare($conn, $stmt)){
+         mysqli_stmt_bind_param($stmt, "s", $par_username);
+         $par_username = $username;
+
+         //Execute Statement
+         if(mysqli_stmt_execute($stmt)){
+            //Store
+            mysqli_stmt_store_result($stmt);
+
+            //If username Exists
+            if(mysqli_stmt_num_rows($stmt) == 1){
+               mysqli_stmt_bind_result($stmt, $username, $email, $hashed_password);
+               if(mysqli_stmt_fetch($stmt)){
+                  if (password_verify($password, $hashed_password)){
+                     //Correct Password
+                     session_start();
+                     $_SESSION['loggedin'] = true;
+                     $_SESSION['username'] = $username;
+                     echo "Correct Password";
+                     header("location:../index.php");
+                  } else {
+                     //Invalid Password
+                     $login_err = "Invalid password";
+                     echo $login_err;
+                  }
+               }
+            } else {
+               $login_err = "Username Does not exist";
+               echo $login_err;
+            }
+         } else {
+            echo "oops lmao";
+         }
+         mysqli_stmt_close($stmt);
+      }
+      mysqli_close($conn);
    }
+
+   //Skip the box if empty thing
+   
 
 ?>
 
@@ -28,7 +70,7 @@
 </head>
 
 <body style="font-family: 'Oswald', sans-serif;">
-    <div class="sidenav">
+    <div class="">
         <div class="login-main-text">
             <a href="../index.php"><i class="fas fa-home fa-lg "></i></a>
             <br><br>
@@ -43,16 +85,16 @@
       <div class="main">
          <div class="col-md-6 col-sm-12">
             <div class="login-form">
-               <form>
+               <form method = "post">
                   <div class="form-group">
                      <label>User Name</label>
-                     <input type="text" class="form-control">
+                     <input type="text" name = "username" class="form-control">
                   </div>
                   <div class="form-group">
                      <label>Password</label>
-                     <input type="password" class="form-control">
+                     <input type="password" name = "password" class="form-control">
                   </div>
-                  <button type="submit" class="btn btn-black">Login</button>
+                  <button type="submit" name ="submit" class="btn btn-black">Login</button>
                </form>
             </div>
          </div>
