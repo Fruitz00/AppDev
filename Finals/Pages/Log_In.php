@@ -34,7 +34,7 @@
                   } else {
                      //Invalid Password
                      $login_err = "Invalid password";
-                     echo $login_err;
+                     echo $login_err;         
                   }
                }
             } else {
@@ -70,7 +70,7 @@
 </head>
 
 <body style="font-family: 'Oswald', sans-serif;">
-    <div class="">
+    <div class="sidenav">
         <div class="login-main-text">
             <a href="../index.php"><i class="fas fa-home fa-lg "></i></a>
             <br><br>

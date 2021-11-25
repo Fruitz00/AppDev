@@ -36,9 +36,10 @@ To do
    
       if ($pass == $cpass){
             include 'db_con.php';
-            $sql = "INSERT INTO users(`FIRST_NAME`,`LAST_NAME`,`ADDRESS`,`USERNAME`,`EMAIL`,`PASSWORD`)
-                        VALUES('$fName','$lName','$address','$userName','$email','$pass')";
-            $finduser = mysqli_query($conn, "SELECT * FROM USERNAME WHERE USERNAME =".$userName);
+            $sql = "INSERT INTO users(`USERNAME`, `FIRST_NAME`,`LAST_NAME`,`ADDRESS`,`EMAIL`,`PASSWORD`)
+                        VALUES('$userName','$fName','$lName','$address','$email','$pass')";
+            $finduser = mysqli_query($conn, "SELECT * FROM USERS WHERE USERNAME = '$userName'");
+
             $result = mysqli_query($conn, $sql);
             if($result){
                 // echo "Submitted Successfully";
