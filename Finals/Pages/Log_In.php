@@ -3,16 +3,15 @@
    require_once "db_con.php";
    $username = $password = "";
    $username_err = $password_err = $login_err = "";
-   $stmt = "SELECT username, email, password from users where username = $username,";
+   $stmt = "SELECT username, email, password from users where username = '$username'";
 
    if (isset($_POST['submit'])){
       $username = $_POST['username'];
       $password = $_POST['password'];
-      $stmt = "SELECT username, email, password from users where username = $username,";
+      $stmt = "SELECT username, email, password from users where username = '$username'";
       //Validate Credentials
 
       if($stmt = mysqli_prepare($conn, $stmt)){
-         mysqli_stmt_bind_param($stmt, "s", $par_username);
          $par_username = $username;
 
          //Execute Statement
@@ -24,7 +23,7 @@
             if(mysqli_stmt_num_rows($stmt) == 1){
                mysqli_stmt_bind_result($stmt, $username, $email, $hashed_password);
                if(mysqli_stmt_fetch($stmt)){
-                  if (password_verify($password, $hashed_password)){
+                  if ($password == $hashed_password){
                      //Correct Password
                      session_start();
                      $_SESSION['loggedin'] = true;
