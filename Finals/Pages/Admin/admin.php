@@ -244,50 +244,45 @@
                     class="table table-striped data-table"
                     style="width: 100%"
                   >
-                    <thead>
-                      <tr>
-                        <th>User ID</th>
-                        <th>Name</th>
-                        <th>Username</th>
-                        <th>Email</th>
-                        <th>Password</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <!-- database -->
-                      <?php
-
-                          require_once "../../database/db_con.php";
-
-                          $sql = "SELECT * FROM users ORDER BY user_id";
-                          $result = $conn->query($sql);
-
-                          if ($result->num_rows > 0) {
-                            foreach($result as $row) {
-
-                            ?>
-                              <tr>
-                                <td> <?=$row["USER_ID"];?> </td>
-                                <td> <?=$row["FIRST_NAME"]." ".$row["LAST_NAME"];?></td>
-                                <td> <?=$row["USERNAME"];?></td>
-                                <td> <?=$row["EMAIL"];?></td>
-                                <td> <?=password_hash($row["PASSWORD"],PASSWORD_DEFAULT);?></td>
-                              </tr>
-                              <?php
+                  <thead>
+                <th>Order ID</th>
+                <th>User ID</th>
+                <th>Product ID</th>
+                <th>Quantity</th>
+                <th>Price</th>
+        </tr>
+        </thead>
+            <tbody>
+         <!-- database -->
+                <?php
+                    require_once "../../database/db_con.php";
+                    $sql = "SELECT * FROM orders ORDER BY order_id";
+                    $result = $conn->query($sql);
+                    if ($result->num_rows > 0) {
+                        foreach($result as $row){
+                ?>
+                <tr>
+                    <td> <?=$row["order_id"];?> </td>
+                    <td> <?=$row["user_id"];?></td>
+                    <td> <?=$row["product_id"];?></td>
+                    <td> <?=$row["quantity"];?></td>
+                    <td> <?=$row["price"];?></td>
+                </tr>
+                    <?php
                             }
                           }
                           else{
                             $conn->close();
                           }	  
-                      ?>
+                    ?>
                     </tbody>
                     <tfoot>
                       <tr>
+                        <th>Order ID</th>
                         <th>User ID</th>
-                        <th>Name</th>
-                        <th>Username</th>
-                        <th>Email</th>
-                        <th>Password</th>
+                        <th>Product ID</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
                       </tr>
                     </tfoot>
                   </table>

@@ -176,11 +176,10 @@
                   >
                     <thead>
                       <tr>
-                        <th>User ID</th>
-                        <th>Name</th>
-                        <th>Username</th>
-                        <th>Email</th>
-                        <th>Password</th>
+                        <th>Product ID</th>
+                        <th>Product Name</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -189,7 +188,7 @@
 
                           require_once "../../database/db_con.php";
 
-                          $sql = "SELECT * FROM users ORDER BY user_id";
+                          $sql = "SELECT * FROM product ORDER BY product_id";
                           $result = $conn->query($sql);
 
                           if ($result->num_rows > 0) {
@@ -197,11 +196,10 @@
 
                             ?>
                               <tr>
-                                <td> <?=$row["USER_ID"];?> </td>
-                                <td> <?=$row["FIRST_NAME"]." ".$row["LAST_NAME"];?></td>
-                                <td> <?=$row["USERNAME"];?></td>
-                                <td> <?=$row["EMAIL"];?></td>
-                                <td> <?=password_hash($row["PASSWORD"],PASSWORD_DEFAULT);?></td>
+                                <td> <?=$row["product_id"];?> </td>
+                                <td> <?=$row["product_name"];?></td>
+                                <td> <?=$row["quantity"];?></td>
+                                <td> <?=$row["price"];?></td>
                               </tr>
                               <?php
                             }
@@ -213,11 +211,10 @@
                     </tbody>
                     <tfoot>
                       <tr>
-                        <th>User ID</th>
-                        <th>Name</th>
-                        <th>Username</th>
-                        <th>Email</th>
-                        <th>Password</th>
+                        <th>Product ID</th>
+                        <th>Product Name</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
                       </tr>
                     </tfoot>
                   </table>
