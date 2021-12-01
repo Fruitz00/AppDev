@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
     <script src="https://kit.fontawesome.com/0c95e134ce.js" crossorigin="anonymous"></script>
-
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
     <!-- start of section-products -->
@@ -34,7 +35,7 @@
             
         </div>
 
-        <br><br><br><br><br><br><br><br><br> 
+        <br><br><br><br><br><br><br> 
 
         <div class = "home-content">
             <div class="animate__animated animate__backInLeft"><h1 >Lorem</h1></div>
@@ -55,8 +56,18 @@
 
     <!-- start of section-about -->
     <section id = "about">
-        <br><br><br><br><br><br><br><br><br> 
-        <h1>about</h1>
+
+        <div class="about-content">
+            <div class = "inner">
+                <h2>About Us</h2> 
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi vitae suscipit tellus mauris a diam maecenas sed. 
+                </p>
+    
+            </div>
+            
+            
+        </div>
     </section>
     <!-- end of section-about  -->
 
@@ -174,8 +185,77 @@
 
     <!-- start of section-customers -->
     <section id = "customers">
-        <br><br><br><br><br><br><br><br><br> 
-        <h1 style = "color: black">customers</h1>           
+         
+        <div class = "customers-content">
+            
+            <h2 style = "color: black">Customer Reviews</h2>
+            <div class="border">
+                
+            </div>
+
+            <div class="row">
+
+                <!-- Customer 1 -->
+                <div class="column">
+                    <div class="review">
+                        <img src="Photos/Customers/customer1.png">
+                        <div class="name">Person 1 Name</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        </p>
+                    </div>
+                </div>
+                
+
+                <!-- Customer 2 -->
+                <div class="column">
+                    <div class="review">
+                        <img src="Photos/Customers/customer2.png">
+                        <div class="name">Customer 2 Name</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- Customer 3 -->
+                <div class="column">
+                    <div class="review">
+                        <img src="Photos/Customers/customer3.png">
+                        <div class="name">Customer 3 Name</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>           
     </section>
     <!-- end of section-customers  -->
 
@@ -194,31 +274,30 @@
                             <div class="row50">
                                 <div class="inputBox">
                                     <span>First Name</span>   
-                                    <input type="text">                                 
+                                    <input type="text">
                                 </div>
-
                                 
                                 <div class="inputBox">
                                     <span>Last Name</span>   
-                                    <input type="text">                                 
+                                    <input type="text"> 
                                 </div>
                             </div>
 
                             <div class="row50">
                                 <div class="inputBox">
                                     <span>Email</span>   
-                                    <input type="text">                                 
+                                    <input type="text">  
                                 </div>
 
                                 <div class="inputBox">
-                                    <span>Mobile</span>   
-                                    <input type="text">                                 
+                                    <span>Mobile</span>
+                                    <input type="text"> 
                                 </div>
                             </div>
 
                             <div class="row100">
                                 <div class="inputBox">
-                                    <span>Message</span>   
+                                    <span>Message</span>
                                     <textarea  ></textarea>                                
                                 </div>
                             </div>
@@ -235,12 +314,30 @@
 
                 <!-- contact info -->
                 <div class="contact info"> 
+                  <h3>Contact Information</h3> 
+                  
+                  <div class = "infoBox">
+                    <div>
+                      <span><ion-icon name="location"></ion-icon></span>
+                      Sampaloc, Manila, Philippines
+                    </div>
 
+                    <div>
+                      <span><ion-icon name="mail"></ion-icon></span>
+                      <a href = "#">company@gmail.com</a>
+                    </div>
+
+                    <div>
+                      <span><ion-icon name="call"></ion-icon></span>
+                      <a href = "#">+63 919 257 4784</a>
+                    </div>                    
+                  </div> 
                 </div>
 
                 <!-- map  -->
                 <div class="contact map"> 
-
+                  <div class ="gmap"><iframe src="https://www.google.com/maps/embed?pb=!1m17!1m8!1m3!1d965.3674208193393!2d120.98238900000001!3d14.572291999999997!3m2!1i1024!2i768!4f13.1!4m6!3e0!4m0!4m3!3m2!1d14.5722401!2d120.9825607!5e0!3m2!1sen!2ssg!4v1638277887511!5m2!1sen!2ssg" width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                  </div>
                 </div>
 
             </div>
@@ -248,11 +345,27 @@
         </div>
     </section>
     <!-- end of section-contact  -->
+    
+    <!-- start of footer  -->
+    <footer>
+        <div class="footer-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
 
-</body>
+            <ul class="socials">
+                <li><a href ="#"><i class="fab fa-facebook"></i></a> </li>
+                <li><a href ="#"><i class="fab fa-twitter"></i></a> </li>
+                <li><a href ="#"><i class="fab fa-instagram"></i></a> </li>
+                <li><a href ="#"><i class="fab fa-google-plus"></i></a> </li>
+            </ul>
+
+            <p>Copyright &copy; 2021. Designed by <span>Fatui</span></p>
+        </div>
 
 
-<footer>
+    </footer>
+    <!-- end of footer  -->
 
-</footer>
+    </body>
+
+
 </html>
