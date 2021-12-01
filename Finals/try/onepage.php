@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Business Page</title>
+    <title>Home</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +18,7 @@
     <section id = "home">
         <div class="navbar">
             <header>
-            <a href = "#"> <img src="images/Logo.png" alt = "logo" width="80px"></a>
+            <a href = "#"> <img src="Photos/Logo.png" alt = "logo" width="80px"></a>
             </header>
 
             <ul id = "menubar">
@@ -67,7 +67,18 @@
       <div class="container">
         <div class="row">
           <div class="col">
-              <img src="../Photos/Products/Zhongli.png" width="150px" alt="Product 1" align = "center">
+              <img src="Photos/Products/Zhongli.png" width="150px" alt="Product 1" align = "center">
+              <h4>Zhongli</h4>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <h6>₱100.00</h6>
+              <button><h6>Add to Cart</h6></button>
+          </div>
+          <div class="col">
+              <img src="Photos/Products/Zhongli.png" width="150px" alt="Product 1" align = "center">
               <h4>Zhongli</h4>
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -78,7 +89,7 @@
               <h6>Add to Cart</h6>
           </div>
           <div class="col">
-              <img src="../Photos/Products/Zhongli.png" width="150px" alt="Product 1" align = "center">
+              <img src="Photos/Products/Zhongli.png" width="150px" alt="Product 1" align = "center">
               <h4>Zhongli</h4>
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -89,18 +100,7 @@
               <h6>Add to Cart</h6>
           </div>
           <div class="col">
-              <img src="../Photos/Products/Zhongli.png" width="150px" alt="Product 1" align = "center">
-              <h4>Zhongli</h4>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <h6>₱100.00</h6>
-              <h6>Add to Cart</h6>
-          </div>
-          <div class="col">
-              <img src="../Photos/Products/Zhongli.png" width="150px" alt="Product 1" align = "center">
+              <img src="Photos/Products/Zhongli.png" width="150px" alt="Product 1" align = "center">
               <h4>Zhongli</h4>
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -114,7 +114,7 @@
 
         <div class="row">
           <div class="col">
-              <img src="../Photos/Products/Zhongli.png" width="150px" alt="Product 1" align = "center">
+              <img src="Photos/Products/Zhongli.png" width="150px" alt="Product 1" align = "center">
               <h4>Zhongli</h4>
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -125,7 +125,7 @@
               <h6>Add to Cart</h6>
           </div>
           <div class="col">
-              <img src="../Photos/Products/Zhongli.png" width="150px" alt="Product 1" align = "center">
+              <img src="Photos/Products/Zhongli.png" width="150px" alt="Product 1" align = "center">
               <h4>Zhongli</h4>
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -136,7 +136,7 @@
               <h6>Add to Cart</h6>
           </div>
           <div class="col">
-              <img src="../Photos/Products/Zhongli.png" width="150px" alt="Product 1" align = "center">
+              <img src="Photos/Products/Zhongli.png" width="150px" alt="Product 1" align = "center">
               <h4>Zhongli</h4>
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -147,7 +147,7 @@
               <h6>Add to Cart</h6>
           </div>
           <div class="col">
-              <img src="../Photos/Products/Zhongli.png" width="150px" alt="Product 1" align = "center">
+              <img src="Photos/Products/Zhongli.png" width="150px" alt="Product 1" align = "center">
               <h4>Zhongli</h4>
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>

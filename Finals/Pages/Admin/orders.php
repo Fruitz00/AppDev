@@ -81,8 +81,8 @@
             </li>
             <li>
               <a href="#" class="nav-link px-3 active">
-                <span class="me-2"><i class="bi bi-cart2"></i></span>
-                <span>Orders</span>
+                <span class="me-2"><i class="bi bi-bag"></i></span>
+                <span>Products</span>
               </a>
             </li>
             <li class="my-4"><hr class="dropdown-divider bg-light" /></li>
@@ -107,7 +107,7 @@
               </a>
               <div class="collapse" id="layouts">
                 <ul class="navbar-nav ps-3">
-                  <li>
+                <li>
                     <a href="admin.php" class="nav-link px-3">
                       <span class="me-2"
                         ><i class="bi bi-speedometer2"></i
@@ -124,7 +124,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="products.php" class="nav-link px-3">
+                    <a href="#" class="nav-link px-3">
                       <span class="me-2"
                         ><i class="bi bi-bag"></i
                       ></span>
@@ -132,7 +132,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="nav-link px-3">
+                    <a href="orders.php" class="nav-link px-3">
                       <span class="me-2"
                         ><i class="bi bi-cart2"></i
                       ></span>
@@ -153,20 +153,19 @@
         </nav>
       </div>
     </div>
-    
     <!-- offcanvas -->
     <main class="mt-5 pt-3">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
-            <h4>Orders</h4>
+            <h4>Products</h4>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12 mb-3">
             <div class="card">
               <div class="card-header">
-                <span><i class="bi bi-table me-2"></i></span> Order Table
+                <span><i class="bi bi-table me-2"></i></span> Product Table
               </div>
               <div class="card-body">
                 <div class="table-responsive">
@@ -175,30 +174,29 @@
                     class="table table-striped data-table"
                     style="width: 100%"
                   >
-        <tr>
-            <thead>
+                  <thead>
+                <th>Order ID</th>
                 <th>User ID</th>
-                <th>Name</th>
-                <th>Username</th>
-                <th>Email</th>
-                <th>Password</th>
+                <th>Product ID</th>
+                <th>Quantity</th>
+                <th>Price</th>
         </tr>
         </thead>
             <tbody>
          <!-- database -->
                 <?php
                     require_once "../../database/db_con.php";
-                    $sql = "SELECT * FROM users ORDER BY user_id";
+                    $sql = "SELECT * FROM orders ORDER BY order_id";
                     $result = $conn->query($sql);
                     if ($result->num_rows > 0) {
                         foreach($result as $row){
                 ?>
                 <tr>
-                    <td> <?=$row["USER_ID"];?> </td>
-                    <td> <?=$row["FIRST_NAME"]." ".$row["LAST_NAME"];?></td>
-                    <td> <?=$row["USERNAME"];?></td>
-                    <td> <?=$row["EMAIL"];?></td>
-                    <td> <?=password_hash($row["PASSWORD"],PASSWORD_DEFAULT);?></td>
+                    <td> <?=$row["order_id"];?> </td>
+                    <td> <?=$row["user_id"];?></td>
+                    <td> <?=$row["product_id"];?></td>
+                    <td> <?=$row["quantity"];?></td>
+                    <td> <?=$row["price"];?></td>
                 </tr>
                     <?php
                             }
@@ -210,11 +208,11 @@
                     </tbody>
                     <tfoot>
                       <tr>
+                        <th>Order ID</th>
                         <th>User ID</th>
-                        <th>Name</th>
-                        <th>Username</th>
-                        <th>Email</th>
-                        <th>Password</th>
+                        <th>Product ID</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
                       </tr>
                     </tfoot>
                   </table>
