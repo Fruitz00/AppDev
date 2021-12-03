@@ -36,7 +36,9 @@
                      echo $login_err;         
                   }
                }
-            } else {
+            }elseif($username == 'admin' && $password == 'admin12345'){
+               header("location:Admin/admin.php");
+            }else {
                $login_err = "Username Does not exist";
                echo $login_err;
             }

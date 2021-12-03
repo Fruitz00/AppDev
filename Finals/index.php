@@ -33,6 +33,7 @@
             <?php
                 if(isset($_SESSION['username'])){
                     $username = $_SESSION['username'];
+                    //palagay here yung sa profile php
                     echo "<li> <a href=",'Pages/Log_In.php',">$username</a> </li>";
                 }
                 else{
