@@ -57,7 +57,10 @@
               </a>
               <ul class="dropdown-menu dropdown-menu-end">
                 <li><a class="dropdown-item" href="#">Profile</a></li>
-                <li><a class="dropdown-item" href="#">Logout</a></li>
+                <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+                  <?php
+                    
+                  ?>
               </ul>
             </li>
           </ul>
