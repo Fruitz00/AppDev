@@ -383,38 +383,38 @@
                             <div class="row50">
                                 <div class="inputBox">
                                     <span>First Name</span>   
-                                    <input type="text">
+                                    <input type="text" name = "fname">
                                 </div>
                                 
                                 <div class="inputBox">
                                     <span>Last Name</span>   
-                                    <input type="text"> 
+                                    <input type="text" name = "lname"> 
                                 </div>
                             </div>
 
                             <div class="row50">
                                 <div class="inputBox">
                                     <span>Email</span>   
-                                    <input type="text">  
+                                    <input type="email" name = "email">  
                                 </div>
 
                                 <div class="inputBox">
                                     <span>Mobile</span>
-                                    <input type="text"> 
+                                    <input type="text" name = "num"> 
                                 </div>
                             </div>
 
                             <div class="row100">
                                 <div class="inputBox">
                                     <span>Message</span>
-                                    <textarea  ></textarea>                                
+                                    <textarea name = "msg"></textarea>                                
                                 </div>
                             </div>
                                 <br>
 
                             <div class="row100">
                                 <div class="inputBox">
-                                    <input type="submit" value = "Submit" class = "submit">
+                                    <input type="submit" name = "submit" value = "Submit" class = "submit">
                                 </div>
                             </div>
                         </div>
@@ -473,7 +473,26 @@
     </footer>
     <!-- end of footer  -->
 
+<?php
+    if(isset($_GET['submit'])){
+        $fname = $_REQUEST['fname'];
+        $lname = $_REQUEST['lname'];
+        $email = $_REQUEST['email'];
+        $num = $_REQUEST['num'];
+        $msg = $_REQUEST['msg'];
+
+        include_once "Pages/db_con.php";
+        $sql = "INSERT INTO response(`firstName`,`lastName`,`email`,`contact`,`message`)
+            VALUES('$fname','$lname','$email','$num','$msg')";
+                                            
+        $result = mysqli_query($conn, $sql);
+        if($result){
+            // echo "Submitted Successfully";
+        }else{
+            // echo "Error Occured";
+        }
+    }
+?>
+
     </body>
-
-
 </html>
