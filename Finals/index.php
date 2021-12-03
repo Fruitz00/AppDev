@@ -13,85 +13,54 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/indexStyle.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="https://kit.fontawesome.com/0c95e134ce.js" crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
     <!-- start of section-products -->
-    <section id = "home">
-        <div class="navbar">
-            <header>
-            <a href = "#home"> <img src="Photos/Logo.png" alt = "logo" width="80px"></a>
-            </header>
-
-            <ul id = "menubar">
-                <li> <a href="#home">Home</a> </li>
-                <li> <a href="#about">About Us</a> </li>
-                <li> <a href="#products">Products</a> </li>
-                <li> <a href="#customers">Customers</a> </li>
-                <li> <a href="#contact">Contact Us</a> </li>
-                <li> <a href="Pages/Log_In.php">Login</a> </li>
-                <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-            </ul>
-
-    <!-- menubar -->
-    <div class="menubar">
-      <div>
-        <img src="Photos/Logo.png" alt="Logo" width="80px">
-      </div>
-        <nav>
-          <ul>
-            <br>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Customers</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="Pages/Log_In.php">Login</a></li>
+    <div class="navbar">
+        <header>
+        <a href = "#home"> <img src="Photos/Logo.png" alt = "logo" width="80px"></a>
+        </header>
+        <ul id = "menubar">
+            <li> <a href="#home">Home</a> </li>
+            <li> <a href="#about">About Us</a> </li>
+            <li> <a href="#products">Products</a> </li>
+            <li> <a href="#customers">Customers</a> </li>
+            <li> <a href="#contact">Contact Us</a> </li>
+            <li> <a href="Pages/Log_In.php">Login</a> </li>
             <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-          </ul>
-        </nav>
+        </ul>
     </div>
-    <!-- end of menu bar -->
-    
-    <!-- start of section-intro -->
+
+    <section id = "home">
     <div class="section-intro">
-      <div class="row">
-        <div class="col-2">
-          <br><br><br><br><br><br><br><br>
-          <div class="animate__animated animate__backInLeft"><h1>Lorem</h1></div>
-          <div class="animate__animated animate__backInLeft"><h1>Ipsum</h1></div>
-          <div class="animate__animated animate__backInLeft">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis voluptates ullam neque aspernatur velit dolore at aliquid est sequi. Nemo architecto.</p>
-          </div>
-          <a href="Pages/Registration.php">
-            <div class="animate__animated animate__bounceIn animate__delay-2s">
-              <div class="button" align = center>Register Now</div>
+        <div class="row">
+            <div class="col">
+            <br> 
             </div>
-          </a>
+            <div class="col">
+            <br><br><br><br><br><br><br><br><br><br><br>
+                <div class="animate__animated animate__backInLeft"><h1>Lorem</h1></div>
+                <div class="animate__animated animate__backInLeft"><h1>Ipsum</h1></div>
+                <div class="animate__animated animate__backInLeft">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis voluptates ullam neque aspernatur velit dolore at aliquid est sequi. Nemo architecto.</p>
+                </div>
+                <a href="Pages/Registration.php">
+                    <div class="animate__animated animate__bounceIn animate__delay-2s">
+                    <div class="button" align = center>Register Now</div>
+                    </div>
+                </a>
           <br>
         </div>
 
-        <br><br><br><br><br><br><br> 
-
-        <div class = "home-content">
-            <div class="animate__animated animate__backInLeft"><h1 >Lorem</h1></div>
-              <div class="animate__animated animate__backInLeft"><h1>Ipsum</h1></div>
-              <div class="animate__animated animate__backInLeft">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis voluptates ullam neque aspernatur velit dolore at aliquid est sequi. Nemo architecto.</p>
-              </div>
-              <a href="Pages/Registration.php">
-                <div class="animate__animated animate__bounceIn animate__delay-2s">
-                  <div class="button">Register Now</div>
-                </div>
-
-              </a>
+        <div class="col-sm-8">
+        <br> 
         </div>
-    </section> 
-    <!-- eof section-home -->
-
+    </div>
+    </section>
 
     <!-- start of section-about -->
     <section id = "about">
@@ -112,136 +81,28 @@
 
 
     <!-- start of section-products -->
-    <section id = "products">
-        <div class="products-content">
-          <h2 align = "center">Featured Products</h2>
-          <br>
-
-          <div class="container">
-            <div class="row">
-              <div class="col">
-                  <img src="Photos/Products/Zhongli.png" width="150px" alt="Product 1" align = "center">
-                  <h4>Zhongli</h4>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <h6>₱100.00</h6>
-                  <h6>Add to Cart</h6>
-              </div>
-
-              <div class="col">
-                  <img src="Photos/Products/Zhongli.png" width="150px" alt="Product 1" align = "center">
-                  <h4>Zhongli</h4>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <h6>₱100.00</h6>
-                  <h6>Add to Cart</h6>
-              </div>
-
-              <div class="col">
-                  <img src="Photos/Products/Zhongli.png" width="150px" alt="Product 1" align = "center">
-                  <h4>Zhongli</h4>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <h6>₱100.00</h6>
-                  <h6>Add to Cart</h6>
-              </div>
-
-              <div class="col">
-                  <img src="Photos/Products/Zhongli.png" width="150px" alt="Product 1" align = "center">
-                  <h4>Zhongli</h4>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <h6>₱100.00</h6>
-                  <h6>Add to Cart</h6>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col">
-                  <img src="Photos/Products/Zhongli.png" width="150px" alt="Product 1" align = "center">
-                  <h4>Zhongli</h4>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <h6>₱100.00</h6>
-                  <h6>Add to Cart</h6>
-              </div>
-              <div class="col">
-                  <img src="Photos/Products/Zhongli.png" width="150px" alt="Product 1" align = "center">
-                  <h4>Zhongli</h4>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <h6>₱100.00</h6>
-                  <h6>Add to Cart</h6>
-              </div>
-
-              <div class="col">
-                  <img src="Photos/Products/Zhongli.png" width="150px" alt="Product 1" align = "center">
-                  <h4>Zhongli</h4>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <h6>₱100.00</h6>
-                  <h6>Add to Cart</h6>
-              </div>
-
-              <div class="col">
-                  <img src="Photos/Products/Zhongli.png" width="150px" alt="Product 1" align = "center">
-                  <h4>Zhongli</h4>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <h6>₱100.00</h6>
-                  <h6>Add to Cart</h6>
-              </div>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <!-- start of section-products -->
-    <section class="section-products">
+    <section class="section-products" id = "products">
 		<div class="container">
 				<div class="row justify-content-center text-center">
 						<div class="col-md-8 col-lg-6">
 								<div class="header">
+										<h3>Featured Product</h3>
 										<h2>Popular Products</h2>
 								</div>
 						</div>
 				</div>
-
 				<div class="row">
 						<!-- Single Product -->
 						<div class="col-md-6 col-lg-4 col-xl-3">
 								<div id="product-1" class="single-product">
 										<div class="part-1">
+                                                <span class="discount">15% off</span>
 												<ul>
 														<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
 												</ul>
 										</div>
 										<div class="part-2">
-												<h3 class="product-title">Here Product Title</h3>
+												<h3 class="product-title">Zhong Li</h3>
 												<h4 class="product-old-price">$79.99</h4>
 												<h4 class="product-price">$49.99</h4>
 										</div>
@@ -251,13 +112,13 @@
 						<div class="col-md-6 col-lg-4 col-xl-3">
 								<div id="product-2" class="single-product">
 										<div class="part-1">
-												<span class="discount">15% off</span>
+
 												<ul>
 														<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
 												</ul>
 										</div>
 										<div class="part-2">
-												<h3 class="product-title">Here Product Title</h3>
+												<h3 class="product-title">Ayaka</h3>
 												<h4 class="product-price">$49.99</h4>
 										</div>
 								</div>
@@ -266,12 +127,13 @@
 						<div class="col-md-6 col-lg-4 col-xl-3">
 								<div id="product-3" class="single-product">
 										<div class="part-1">
+                                                <span class="discount">15% off</span>
 												<ul>
 														<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
 												</ul>
 										</div>
 										<div class="part-2">
-												<h3 class="product-title">Here Product Title</h3>
+												<h3 class="product-title">Eula</h3>
 												<h4 class="product-old-price">$79.99</h4>
 												<h4 class="product-price">$49.99</h4>
 										</div>
@@ -287,7 +149,7 @@
 												</ul>
 										</div>
 										<div class="part-2">
-												<h3 class="product-title">Here Product Title</h3>
+												<h3 class="product-title">Raiden Shogun</h3>
 												<h4 class="product-price">$49.99</h4>
 										</div>
 								</div>
@@ -296,12 +158,13 @@
 						<div class="col-md-6 col-lg-4 col-xl-3">
 								<div id="product-5" class="single-product">
 										<div class="part-1">
+                                                <span class="discount">15% off</span>
 												<ul>
 														<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
 												</ul>
 										</div>
 										<div class="part-2">
-												<h3 class="product-title">Here Product Title</h3>
+												<h3 class="product-title">Rosaria</h3>
 												<h4 class="product-old-price">$79.99</h4>
 												<h4 class="product-price">$49.99</h4>
 										</div>
@@ -311,13 +174,12 @@
 						<div class="col-md-6 col-lg-4 col-xl-3">
 								<div id="product-6" class="single-product">
 										<div class="part-1">
-												<span class="discount">15% off</span>
 												<ul>
 														<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
 												</ul>
 										</div>
 										<div class="part-2">
-												<h3 class="product-title">Here Product Title</h3>
+												<h3 class="product-title">Xiao</h3>
 												<h4 class="product-price">$49.99</h4>
 										</div>
 								</div>
@@ -326,12 +188,13 @@
 						<div class="col-md-6 col-lg-4 col-xl-3">
 								<div id="product-7" class="single-product">
 										<div class="part-1">
+                                                <span class="discount">15% off</span>
 												<ul>
 														<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
 												</ul>
 										</div>
 										<div class="part-2">
-												<h3 class="product-title">Here Product Title</h3>
+												<h3 class="product-title">Venti</h3>
 												<h4 class="product-old-price">$79.99</h4>
 												<h4 class="product-price">$49.99</h4>
 										</div>
@@ -347,7 +210,7 @@
 												</ul>
 										</div>
 										<div class="part-2">
-												<h3 class="product-title">Here Product Title</h3>
+												<h3 class="product-title">Bennett</h3>
 												<h4 class="product-price">$49.99</h4>
 										</div>
 								</div>
@@ -355,17 +218,78 @@
 				</div>
 		</div>
 </section>
-    <!-- end of section-products -->
-
-
+    <!-- start of section-products -->
+    
     <!-- start of section-customers -->
     <section id = "customers">
-         
         <div class = "customers-content">
             
             <h2 style = "color: black">Customer Reviews</h2>
             <div class="border">
                 
+            </div>
+
+            <div class="row">
+
+                <!-- Customer 1 -->
+                <div class="column">
+                    <div class="review">
+                        <img src="Photos/Customers/customer1.png">
+                        <div class="name">Person 1 Name</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        </p>
+                    </div>
+                </div>
+                
+
+                <!-- Customer 2 -->
+                <div class="column">
+                    <div class="review">
+                        <img src="Photos/Customers/customer2.png">
+                        <div class="name">Customer 2 Name</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- Customer 3 -->
+                <div class="column">
+                    <div class="review">
+                        <img src="Photos/Customers/customer3.png">
+                        <div class="name">Customer 3 Name</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        </p>
+                    </div>
+                </div>
+
             </div>
 
             <div class="row">
@@ -437,9 +361,9 @@
     <section id = "contact">   
         <div class = "contact-content"> 
             <div class = "title">
-                <h2>Get in Touch</h2>
+                <h2>Get In Touch with us</h2>
             </div>
-
+            <br>
             <div class = "box"> 
                 <!-- contact form -->
                 <div class="contact form"> 
@@ -504,7 +428,7 @@
 
                     <div>
                       <span><ion-icon name="call"></ion-icon></span>
-                      <a href = "#">+63 919 257 4784</a>
+                      <a href = "#">+63 912 3456 789</a>
                     </div>                    
                   </div> 
                 </div>
@@ -532,7 +456,6 @@
                 <li><a href ="#"><i class="fab fa-instagram"></i></a> </li>
                 <li><a href ="#"><i class="fab fa-google-plus"></i></a> </li>
             </ul>
-
             <p>Copyright &copy; 2021. Designed by <span>Fatui</span></p>
         </div>
 
