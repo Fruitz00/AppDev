@@ -1,5 +1,5 @@
 <?php
-  $logged_in = False;
+  session_start();
 ?>
 
 
@@ -30,7 +30,16 @@
             <li> <a href="#products">Products</a> </li>
             <li> <a href="#customers">Customers</a> </li>
             <li> <a href="#contact">Contact Us</a> </li>
-            <li> <a href="Pages/Log_In.php">Login</a> </li>
+            <?php
+                if(isset($_SESSION['username'])){
+                    $username = $_SESSION['username'];
+                    echo "<li> <a href=",'Pages/Log_In.php',">$username</a> </li>";
+                }
+                else{
+                    echo"<li> <a href=",'Pages/Log_In.php',">Login</a> </li>";
+                }
+            
+            ?>
             <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
         </ul>
     </div>
