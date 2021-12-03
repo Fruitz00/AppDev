@@ -1,7 +1,7 @@
-<?php 
-	require "admin_header.php";
+<?php
+  require "admin_header.php";
 ?>
-  <body>
+<body>
     <!-- top navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container-fluid">
@@ -17,7 +17,7 @@
         <a
           class="navbar-brand me-auto ms-lg-0 ms-3 text-uppercase fw-bold"
           href="#"
-          >Frontendfunn</a
+          >ADMIN</a
         >
         <button
           class="navbar-toggler"
@@ -161,6 +161,7 @@
             <h4>Products</h4>
           </div>
         </div>
+
         <div class="row">
           <div class="col-md-12 mb-3">
             <div class="card">
@@ -223,6 +224,61 @@
             </div>
           </div>
         </div>
+        
+        <!-- add product -->
+        <div class="row">
+          <div class="col-md-12 mb-3">
+            <div class="card">
+              <div class="card-header">
+                <span><i class="bi bi-table me-2"></i></span> Add Product
+              </div>
+                <div style = "margin: 20px;">
+                  <form>
+                    <div>
+                      <label>Product Name</label>
+                      <input type="text" name = "product">
+                    </div>
+                    <br>
+                    <div>
+                      <label>Quantity</label>
+                      <input type="number" name = "qty">
+                    </div>
+                    <br>
+                    <div>
+                      <label>Price</label>
+                      <input type="text" name = "price">
+                    </div>
+                    <br>
+                    <div>
+                      <input type="submit" name = "submit1">
+                    </div>
+                  </form>
+                </div>
+            </div>
+          </div>
+
+          <!-- start remove product -->
+          <div class="row">
+          <div class="col-md-12 mb-3">
+            <div class="card">
+              <div class="card-header">
+                <span><i class="bi bi-table me-2"></i></span> Remove Product
+              </div>
+                <div style = "margin: 20px;">
+                  <form>
+                  <div>
+                    <label>Product ID</label>
+                    <input type="number" name = "prodID">
+                  </div>
+                  <br>
+                    <div>
+                      <input type="submit" name = "submit2">
+                    </div>
+                  </form>
+                </div>
+            </div>
+          </div>
+          <!-- end of remove product                   -->
       </div>
     </main>
     <script src="./js/bootstrap.bundle.min.js"></script>
@@ -233,3 +289,34 @@
     <script src="./js/script.js"></script>
   </body>
 </html>
+
+<?php
+  if(isset($_GET['submit1'])){
+    $product = $_GET['product'];
+    $qty = $_GET['qty'];
+    $price = $_GET['price'];
+
+    include_once "../db_con.php";
+    $sql = "INSERT INTO product(`product_name`,`quantity`,`price`)
+        VALUES('$product','$qty','$price')";
+                                        
+    $result = mysqli_query($conn, $sql);
+    if($result){
+      header("location: products.php");
+    }else{
+
+    }
+  }elseif(isset($_GET['submit2'])){
+    $pID = $_GET['prodID'];
+
+    include_once "../db_con.php";
+    $sql = "DELETE FROM `product` where `product_id` = $pID";
+                                        
+    $result = mysqli_query($conn, $sql);
+    if($result){
+      // header("location: products.php");
+    }else{
+
+    }
+  }
+?>

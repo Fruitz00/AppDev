@@ -107,9 +107,6 @@
 								<div id="product-1" class="single-product">
 										<div class="part-1">
                                                 <span class="discount">15% off</span>
-												<ul>
-														<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-												</ul>
 										</div>
 										<div class="part-2">
 												<h3 class="product-title">Zhong Li</h3>
@@ -122,10 +119,6 @@
 						<div class="col-md-6 col-lg-4 col-xl-3">
 								<div id="product-2" class="single-product">
 										<div class="part-1">
-
-												<ul>
-														<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-												</ul>
 										</div>
 										<div class="part-2">
 												<h3 class="product-title">Ayaka</h3>
@@ -138,9 +131,6 @@
 								<div id="product-3" class="single-product">
 										<div class="part-1">
                                                 <span class="discount">15% off</span>
-												<ul>
-														<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-												</ul>
 										</div>
 										<div class="part-2">
 												<h3 class="product-title">Eula</h3>
@@ -154,9 +144,6 @@
 								<div id="product-4" class="single-product">
 										<div class="part-1">
 												<span class="new">new</span>
-												<ul>
-														<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-												</ul>
 										</div>
 										<div class="part-2">
 												<h3 class="product-title">Raiden Shogun</h3>
@@ -169,9 +156,6 @@
 								<div id="product-5" class="single-product">
 										<div class="part-1">
                                                 <span class="discount">15% off</span>
-												<ul>
-														<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-												</ul>
 										</div>
 										<div class="part-2">
 												<h3 class="product-title">Rosaria</h3>
@@ -184,9 +168,6 @@
 						<div class="col-md-6 col-lg-4 col-xl-3">
 								<div id="product-6" class="single-product">
 										<div class="part-1">
-												<ul>
-														<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-												</ul>
 										</div>
 										<div class="part-2">
 												<h3 class="product-title">Xiao</h3>
@@ -199,9 +180,6 @@
 								<div id="product-7" class="single-product">
 										<div class="part-1">
                                                 <span class="discount">15% off</span>
-												<ul>
-														<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-												</ul>
 										</div>
 										<div class="part-2">
 												<h3 class="product-title">Venti</h3>
@@ -215,9 +193,6 @@
 								<div id="product-8" class="single-product">
 										<div class="part-1">
 												<span class="new">new</span>
-												<ul>
-														<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-												</ul>
 										</div>
 										<div class="part-2">
 												<h3 class="product-title">Bennett</h3>

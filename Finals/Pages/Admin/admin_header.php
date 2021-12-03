@@ -11,5 +11,5 @@
     />
     <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Frontendfunn - Bootstrap 5 Admin Dashboard Template</title>
+    <title>Admin</title>
   </head>

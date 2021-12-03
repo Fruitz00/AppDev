@@ -161,6 +161,7 @@
             <h4>Accounts</h4>
           </div>
         </div>
+
         <div class="row">
           <div class="col-md-12 mb-3">
             <div class="card">
@@ -226,6 +227,30 @@
             </div>
           </div>
         </div>
+        
+        <div class="row">
+          <div class="col-md-12 mb-3">
+            <div class="card">
+              <div class="card-header">
+                <span><i class="bi bi-table me-2"></i></span> Remove Account
+              </div>
+                <div style = "margin: 20px;">
+                  <form>
+                  <div>
+                    <label>Product ID</label>
+                    <input type="number" name = "userID">
+                  </div>
+                  <br>
+                    <div>
+                      <input type="submit" name = "submit1">
+                    </div>
+                  </form>
+                </div>
+            </div>
+          </div>
+
+
+
       </div>
     </main>
     <script src="./js/bootstrap.bundle.min.js"></script>
@@ -236,3 +261,20 @@
     <script src="./js/script.js"></script>
   </body>
 </html>
+
+
+<?php
+  if(isset($_GET['submit1'])){
+    $uID = $_GET['userID'];
+
+    include_once "../db_con.php";
+    $sql = "DELETE FROM `users` where `USER_ID` = $uID";
+                                        
+    $result = mysqli_query($conn, $sql);
+    if($result){
+      // header("location: products.php");
+    }else{
+
+    }
+  }
+?>
