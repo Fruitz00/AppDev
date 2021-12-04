@@ -1,5 +1,18 @@
 <?php
+require_once 'db_con.php';
     session_start();
+
+    if(!isset($_SESSION['username'])){
+      $username = $_SESSION['username'];
+      $email = $_SESSION['email'];
+      header("Log_in.php");
+    }
+
+    if(isset($_POST['logoutuser'])){
+      header("Location: ../index.php");
+      session_destroy();
+
+    }
 ?>
 <!DOCTYPE html>
 
@@ -34,10 +47,10 @@
                 if(isset($_SESSION['username'])){
                     $username = $_SESSION['username'];
                     //palagay here yung sa profile php
-                    echo "<li> <a href=",'../Pages/userprofile.php',">$username</a> </li>";
+                    echo "<li> <a href=",'../Pages/userprofile.php',">",$_SESSION['username'],"</a> </li>";
                 }
                 else{
-                    echo"<li> <a href=",'Pages/Log_In.php',">Login</a> </li>";
+                    echo"<li> <a href=",'../Pages/Log_In.php',">Login</a> </li>";
                 }
             
             ?>
@@ -55,12 +68,7 @@
       <div class="row no-gutters row-bordered row-border-light">
         <div class="col-md-3 pt-0">
           <div class="list-group list-group-flush account-settings-links">
-            <a class="list-group-item list-group-item-action active" data-toggle="list" href="#account-general">General</a>
-            <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-change-password">Change password</a>
-            <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-info">Info</a>
-            <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-social-links">Social links</a>
-            <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-connections">Connections</a>
-            <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-notifications">Notifications</a>
+            <a class="list-group-item list-group-item-action active" data-toggle="list" href = "userprofile.php">General</a>
           </div>
         </div>
         <div class="col-md-9">
@@ -80,25 +88,25 @@
                 </div>
               </div>
               <hr class="border-light m-0">
-
-              <div class="card-body">
-                <div class="form-group">
-                  <label class="form-label">Username</label>
-                  <input type="text" class="form-control mb-1" value="<?php echo($_SESSION['username']); ?>">
+              <form method = "post">
+                <div class="card-body">
+                  <div class="form-group">
+                    <label class="form-label">Username</label>
+                    <input type="text" class="form-control mb-1" name= "usernamebox" value="<?php echo($_SESSION['username']); ?>">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">E-mail</label>
+                    <input type="text" class="form-control mb-1" name = "emailbox" value="<?php echo $_SESSION['email'] ?>">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Change Password</label>
+                    <input type="text" class="form-control mb-1" name ='password1' id = 'password1' value="Password">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Confirm Password</label>
+                    <input type="text" class="form-control mb-1" name ='password2' id = 'password2' value="Confirm Password">
+                  </div>
                 </div>
-                <div class="form-group">
-                  <label class="form-label">E-mail</label>
-                  <input type="text" class="form-control mb-1" value="nmaxwell@mail.com">
-                </div>
-                <div class="form-group">
-                  <label class="form-label">Change Password</label>
-                  <input type="text" class="form-control mb-1" value="password">
-                </div>
-                <div class="form-group">
-                  <label class="form-label">Confirm Password</label>
-                  <input type="text" class="form-control mb-1" value="confirm password">
-                </div>
-              </div>
 
             </div>
             <div class="tab-pane fade" id="account-change-password">
@@ -286,13 +294,41 @@
           </div>
         </div>
       </div>
+    </div>               
+        <div class="text-right mt-3">
+          <button type="submit" class="btn btn-primary" name ="savechanges">Save changes</button>
+          <button type="submit" class="btn btn-default">Cancel</button>
+          <button type="submit" class="btn btn-primary" name="logoutuser" href="../index.php">Log Out</button>
     </div>
-
-    <div class="text-right mt-3">
-      <button type="button" class="btn btn-primary">Save changes</button>&nbsp;
-      <button type="button" class="btn btn-default">Cancel</button>
-    </div>
+</form>
 
   </div>
+
+  <?php
+      if(isset($_POST['savechanges'])){
+        $stmt = "SELECT username, email, password from users where username = '$username'";
+        //Password
+        if (isset($_POST['password1']) && isset($_POST['password2'])){
+          if($_POST['password1'] == $_POST['password2']){
+            //Same Password
+            echo "Password same as before";
+          } else if(isset($_POST['password1']) && $_POST['password1'] != 'Password'){
+            echo "Password Change.";
+          } else {
+
+          }
+        }
+
+        //Username
+        if (isset($_POST['usernamebox'])){
+          if($_POST['usernamebox'] == $username){
+            echo "Username same as before";
+          } else if ($_POST['usernamebox'] != $username){
+            echo "Username Change";
+          }
+        }
+        
+      }
+  ?>
 </body>
 </html>

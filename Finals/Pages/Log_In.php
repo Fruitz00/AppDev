@@ -28,6 +28,7 @@
                      session_start();
                      $_SESSION['loggedin'] = true;
                      $_SESSION['username'] = $username;
+                     $_SESSION['email'] = $email;
                      echo "Correct Password";
                      header("location:../index.php");
                   } else {
